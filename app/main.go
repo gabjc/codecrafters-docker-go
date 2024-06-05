@@ -17,6 +17,8 @@ func main() {
 	command := os.Args[3]
 	args := os.Args[4:len(os.Args)]
 
+	fmt.Println(args)
+
 	cmd := exec.Command(command, args...)
 	output, err := cmd.Output()
 	if err != nil {
